@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Assignment 1</string>
+    <string name="showresult">ShowRESULT</string>
+    <string name="student_data">Student Data</string>
+    <string name="studentid">StudentID</string>
+    <string name="score">Score</string>
+    <string name="student_Information">Student Information</string>
+    <string name="id">ID</string>
+    <string name="student_information">student_information</string>
+    <string-array name="data">
+        <item>iD</item>
+        <item>score</item>
+    </string-array>
+</resources>
