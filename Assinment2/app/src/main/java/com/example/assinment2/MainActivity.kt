@@ -6,37 +6,63 @@ import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.widget.*
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
+
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val button1:Button=findViewById(R.id.button)
-        val result:TextView = findViewById(R.id.textView)
-        val editText:EditText = findViewById(R.id.editTextTextPersonName)
-        button1.setOnClickListener()
-        {
-            var name : String = editText.text.toString()
-            result.text = name
-        }
+
+
+
+
     }
-        override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-          val inflater = menuInflater
-            inflater.inflate(R.menu.my_first_menu,menu);
-            return true;
-        }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-
-
-
-        when (item.itemId)
-        {
-            R.id.item1 -> supportFragmentManager.beginTransaction()
-                .replace(R.id.First, FirstFragment.newInstance("", "")).commit();
-
-            R.id.item2 -> supportFragmentManager.beginTransaction()
-                .replace(R.id.Second, SecondFragment.newInstance("", "")).commit();
-        }
-        return true
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        /*val inflater = menuInflater
+        inflater.inflate(R.menu.my_first_menu, menu);
+        return true;*/
+        menuInflater.inflate(R.menu.my_first_menu, menu)
+        return super.onCreateOptionsMenu(menu)
     }
+
+    override fun onOptionsItemSelected(item: MenuItem) : Boolean {
+       
+        if (item.itemId == R.id.item1) {
+            var a: FragmentTransaction = supportFragmentManager.beginTransaction()
+            var b =FirstFragment()
+            a.replace(R.id.container, b)
+            a.commit()
+        }
+        if (item.itemId == R.id.item2) {
+            var a: FragmentTransaction = supportFragmentManager.beginTransaction()
+            var b =SecondFragment()
+            a.replace(R.id.container, b)
+            a.commit()
+        }
+        return super.onOptionsItemSelected(item)
     }
+
+}
+
+private fun Any.replace(container: Int, b: SecondFragment) {
+
+}
+
+private fun Any.replace(container: Int, b: FirstFragment) {
+
+}
+/*when (item.itemId)
+{
+    R.id.item1 -> supportFragmentManager.beginTransaction()
+        .replace(R.id.First,
+
+    R.id.item2 -> supportFragmentManager.beginTransaction()
+        .replace(R.id.Second, SecondFragment.newInstance("", "")).commit();
+}
+return true
+}
+
+ */
+

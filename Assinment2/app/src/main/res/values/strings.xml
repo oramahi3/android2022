@@ -9,11 +9,13 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="enter_no">Enter No</string>
-    <string name="ok">Ok</string>
+    <string name="ok2">Ok2</string>
     <string name="enter_no2" />
     <string name="Calculate" />
     <string name="enter_no1">enter_no1</string>
     <string name="print">Print</string>
     <string name="name">Name</string>
     <string name="textview">TextView</string>
+    <string name="ok">Ok</string>
+    <string name="result">Result</string>
 </resources>
