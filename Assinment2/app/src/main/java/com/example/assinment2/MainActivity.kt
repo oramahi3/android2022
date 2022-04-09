@@ -1,10 +1,8 @@
 package com.example.assinment2
-
 import androidx.appcompat.app.AppCompatActivity
+import android.view.MenuItem
 import android.os.Bundle
 import android.view.Menu
-import android.view.MenuInflater
-import android.view.MenuItem
 import android.widget.*
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
@@ -13,10 +11,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-
-
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -29,13 +23,13 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem) : Boolean {
        
-        if (item.itemId == R.id.item1) {
+        if (item.itemId == R.id.item2) {
             var a: FragmentTransaction = supportFragmentManager.beginTransaction()
             var b =FirstFragment()
             a.replace(R.id.container, b)
             a.commit()
         }
-        if (item.itemId == R.id.item2) {
+        if (item.itemId == R.id.item3) {
             var a: FragmentTransaction = supportFragmentManager.beginTransaction()
             var b =SecondFragment()
             a.replace(R.id.container, b)
