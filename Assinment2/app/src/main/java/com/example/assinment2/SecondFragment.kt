@@ -1,5 +1,4 @@
 package com.example.assinment2
-import android.content.ContentValues.TAG
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -23,7 +22,7 @@ class SecondFragment:Fragment() {
             requireActivity().applicationContext,
             android.R.layout.simple_spinner_item,
             items
-        ) as SpinnerAdapter
+        )
         return view
 
         /*spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
@@ -37,20 +36,24 @@ class SecondFragment:Fragment() {
 
 
 }*/
-        val edtxt1= view.findViewById<EditText>(R.id.txtno1)
-        val edtxt2= view.findViewById<EditText>(R.id.txtno2)
-        val button= view.findViewById<Button>(R.id.btncal)
+        val edtxt1 = view.findViewById<EditText>(R.id.txtno1)
+        val edtxt2 = view.findViewById<EditText>(R.id.txtno2)
+        val button = view.findViewById<Button>(R.id.btncal)
         var flag: String = "sum"
         val result = view.findViewById<TextView>(R.id.textView)
+
         button.setOnClickListener()
         {
+
             val x: Int = edtxt1.text.toString().toInt()
             val y: Int = edtxt2.text.toString().toInt()
-            if (flag == "multi")
-                result.text = sum(x, y).toString();
+            if (flag == "sum")
+                result.text = sum(x, y).toString()
             else
-                result.text = multi(x, y).toString();
+                result.text = multi(x, y).toString()
+
         }
+
         spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
                 flag = items.get(p2)
@@ -68,18 +71,18 @@ class SecondFragment:Fragment() {
 
 
 
-        fun onCreate(savedInstanceState: Bundle?) {
-            super.onCreate(savedInstanceState)
-        }
+//        fun onCreate(savedInstanceState: Bundle?) {
+//            super.onCreate(savedInstanceState)
+//        }
 
 
     }
 
     fun sum(a: Int, b: Int): Int {
-        return a + b;
+        return a + b
     }
 
     fun multi(a: Int, b: Int): Int {
-        return a * b;
+        return a * b
     }
 }

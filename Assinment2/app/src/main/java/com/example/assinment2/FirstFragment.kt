@@ -22,11 +22,15 @@ class FirstFragment:Fragment()
      val button1= view2.findViewById<Button>(R.id.btnok)
      val edtxt3= view2.findViewById<EditText>(R.id.txtno)
      val result2=view2.findViewById<TextView?>(R.id.textView3)
-
+     button1.setOnClickListener()
+     {
+         val x = edtxt3.text
+         result2.text = x.toString()
+     }
  }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
+//    override fun onCreate(savedInstanceState: Bundle?) {
+//        super.onCreate(savedInstanceState)
+//    }
 
 }

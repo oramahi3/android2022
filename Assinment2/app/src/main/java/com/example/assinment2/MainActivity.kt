@@ -11,6 +11,18 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val edtxt3 : EditText = findViewById(R.id.fname)
+        val edtxt4 : EditText = findViewById(R.id.lname)
+        val resulttv2:TextView = findViewById(R.id.textView2)
+        val button3 : Button = findViewById(R.id.pbutton)
+        button3.setOnClickListener()
+        {
+            var x = edtxt3.text
+            var y = edtxt4.text
+            resulttv2.text =  x.toString() + " " + y.toString()
+        }
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

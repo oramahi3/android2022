@@ -4,19 +4,22 @@
     android:id="@+id/First"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/design_default_color_error"
     tools:context=".FirstFragment">
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="٠dp"
+        tools:layout_editor_absoluteY="٠dp">
 
         <EditText
             android:id="@+id/txtno"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:hint="Enter No" />
+            android:hint="EnterStudnetID" />
 
         <Button
             android:id="@+id/btnok"
