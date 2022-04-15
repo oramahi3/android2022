@@ -75,7 +75,6 @@ class SecondFragment:Fragment() {
 //            super.onCreate(savedInstanceState)
 //        }
 
-
     }
 
     fun sum(a: Int, b: Int): Int {
